@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains a simple application that demonstrates how Tracing can be implemented. The app features a single endpoint, `/news`, which retrieves news items from a database and utilizes Jaeger for tracing capabilities.
+This repository contains a simple application that demonstrates how Tracing can be implemented. The app features a single endpoint, `/news`, which retrieves news items from a database and utilizes OpenTelemetry for tracing capabilities.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Follow the steps below to set up the application for tracing:
     ```shell
     docker run --rm -it -p 6831:6831/udp -p 16686:16686 -p 14269:14269 --name jaeger jaegertracing/all-in-one:latest
     ```
-    The jaegertracing/all-in-one:latest image is a self-contained, all-in-one distribution of the Jaeger tracing system. It includes all the necessary components to set up a local Jaeger instance for tracing.
+    The jaegertracing/all-in-one image is a self-contained, all-in-one distribution of the Jaeger tracing system. It includes all the necessary components to set up a local Jaeger instance for tracing.
 
 3. **Run the Go Application**: 
     ```shell
